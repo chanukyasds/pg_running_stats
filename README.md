@@ -3,7 +3,7 @@
 
 Mergeable Running Statistics (Welford/Chan) for PostgreSQL
 
-`pg_running_stats` provides numerically stable, single-pass, and mergeable running statistics directly inside PostgreSQL.
+This extension provides numerically stable, single-pass, and mergeable running statistics directly inside PostgreSQL.
 It computes mean, variance, standard deviation, skewness, kurtosis, and min/max efficiently in pure C.
 
 ---
@@ -26,7 +26,7 @@ PostgreSQL development headers must be installed locally.
 
 ### macOS (Homebrew)
 ```bash
-brew install postgresql@17
+brew install postgresql@{version}
 make
 make install
 ````
@@ -34,7 +34,7 @@ make install
 ### Linux (Ubuntu/Debian)
 
 ```bash
-sudo apt install postgresql-server-dev-17
+sudo apt install postgresql-server-dev-{version}
 make
 sudo make install
 ```
@@ -102,7 +102,7 @@ You can merge results from partitions, shards, or parallel workers without recom
 
 ## Algorithm
 
-`pg_running_stats` implements the Welford (1962) and Chan et al. (1979) algorithms for online variance and higher moments.
+This extension implements the Welford (1962) and Chan et al. (1979) algorithms for online variance and higher moments.
 
 References:
 
@@ -123,7 +123,7 @@ These algorithms ensure:
 | ---------------- | ----------------------------- |
 | macOS (Homebrew) | Tested on Ventura and Sequoia |
 | Ubuntu / Debian  | Tested on 22.04 LTS and 24.04 |
-| PostgreSQL       | Supported versions 13 – 17    |
+| PostgreSQL       | Supported versions 13+        |
 
 ---
 
