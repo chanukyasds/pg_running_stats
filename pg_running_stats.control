@@ -1,0 +1,4 @@
+comment = 'Mergeable running statistics (Welford/Chan) for PostgreSQL'
+default_version = '1.0'
+relocatable = true
+module_pathname = '$libdir/pg_running_stats'
