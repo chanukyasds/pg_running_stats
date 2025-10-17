@@ -52,7 +52,15 @@ CREATE EXTENSION pg_running_stats;
 ### One-run aggregate
 
 ```sql
-SELECT (running_stats(x)).*
+SELECT  (running_stats(x)).n,
+        (running_stats(x)).mean,
+        (running_stats(x)).var,
+        (running_stats(x)).stddev,
+        (running_stats(x)).skew,
+        (running_stats(x)).kurt,
+        (running_stats(x)).min,
+        (running_stats(x)).max
+        
 FROM (VALUES (1.0),(2.0),(3.0),(4.0),(5.0)) t(x);
 ```
 
