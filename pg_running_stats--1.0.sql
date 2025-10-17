@@ -55,7 +55,7 @@ CREATE AGGREGATE rstat_state(double precision)
   PARALLEL    = safe
 );
 
--- One-shot aggregate returning full record (mergeable)
+-- One-run aggregate returning full record (mergeable)
 DROP AGGREGATE IF EXISTS running_stats(double precision);
 CREATE AGGREGATE running_stats(double precision)
 (
